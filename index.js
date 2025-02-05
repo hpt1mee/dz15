@@ -39,8 +39,8 @@ const studentsAvgDebug = students.map(student => {
     return `- ${names} : ${lodash.round(avg, 2)}\n`
 })
 
-const goodStudents = studentsAvgObj.filter(el => el.avg >= 4.5).length
-const badStudents = studentsAvgObj.filter(el => el.avg <= 3.0).length
+const goodStudents = lodash.filter(studentsAvgObj, (el) => el.avg >= 4.5).length
+const badStudents = lodash.filter(studentsAvgObj, (el) => el.avg <= 3.0).length
 
 result.push(studentsAvgDebug)
 
